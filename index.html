@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nezzo AI – Deine KI, 0€</title>
+  <meta name="description" content="Nezzo AI: Open-Source KI-Chat mit Free, Ultra, GOD & Nezzo Tiers. Kostenlos hosten, selbst trainieren.">
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --card: #13131f;
+      --text: #e0e0ff;
+      --muted: #8888aa;
+      --accent: #7c3aed;
+      --accent2: #06b6d4;
+      --success: #22c55e;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 16px;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      background: linear-gradient(to right, #fff, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header p { color: #f0f0ff; opacity: 0.9; }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin: 5px;
+    }
+    section {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 20px;
+      border: 1px solid #2a2a4a;
+    }
+    h2 {
+      color: var(--accent2);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 8px;
+    }
+    h3 { color: var(--accent); margin: 15px 0 8px; }
+    ul { padding-left: 20px; margin: 10px 0; }
+    li { margin: 5px 0; color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 15px 0;
+    }
+    .tier {
+      background: #1a1a2e;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      border: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+    .tier.free { border-color: var(--success); }
+    .tier.ultra { border-color: var(--accent2); }
+    .tier.god { border-color: var(--warning); }
+    .tier.nezzo { border-color: var(--accent); }
+    .tier h4 { margin-bottom: 8px; font-size: 1.2rem; }
+    .price { font-size: 1.8rem; font-weight: bold; margin: 5px 0; }
+    .price.free { color: var(--success); }
+    .price.paid { color: var(--muted); }
+    .token-info {
+      background: #0f0f1a;
+      padding: 12px;
+      border-radius: 8px;
+      font-family: monospace;
+      margin: 10px 0;
+    }
+    .warning {
+      background: #2a1a1a;
+      border-left: 4px solid var(--danger);
+      padding: 12px 15px;
+      margin: 15px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    a { color: var(--accent2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .status { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 6px; 
+      background: #1a1a2e; 
+      padding: 6px 12px; 
+      border-radius: 20px; 
+      font-size: 0.9rem;
+      margin: 10px 0;
+    }
+    .dot { 
+      width: 8px; 
+      height: 8px; 
+      background: var(--success); 
+      border-radius: 50%; 
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- HEADER -->
+    <header>
+      <h1>🤖 Nezzo AI</h1>
+      <p>Deine eigene KI. Open Source. Kostenlos.</p>
+      <div>
+        <span class="badge">Llama 70B Ready</span>
+        <span class="badge">Supabase Backend</span>
+        <span class="badge">GitHub Pages</span>
+        <span class="badge">0€ Start</span>
+      </div>
+    </header>
+
+    <!-- STATUS -->
+    <section>
+      <h2>🟢 Projekt-Status</h2>
+      <div class="status"><span class="dot"></span> In Entwicklung – Beta bald verfügbar</div>
+      <p><strong>Repo:</strong> <a href="https://github.com/thenano-host/nezzi-ai" target="_blank">github.com/thenano-host/nezzi-ai</a><br>
+         <strong>Live:</strong> <code>https://thenano-host.github.io/nezzi-ai</code> (kommt bald)</p>
+    </section>
+
+    <!-- WAS IST NEZZO AI -->
+    <section>
+      <h2>💡 Was ist Nezzo AI?</h2>
+      <p>Nezzo AI ist eine Open-Source KI-Chat-Plattform, die du selbst hosten, anpassen und trainieren kannst. Starte kostenlos mit Free-Tier APIs oder verbinde dein eigenes Llama-Modell.</p>
+      <ul>
+        <li>✅ Chat-Interface mit Login (Email/Google)</li>
+        <li>✅ Community: Chats teilen, liken, diskutieren</li>
+        <li>✅ Tiers: Free • Ultra • GOD • Nezzo</li>
+        <li>✅ Supabase für Auth, DB & Storage (Free Tier)</li>
+        <li>✅ Bereit für Llama 70B, Qwen, Mistral & mehr</li>
+      </ul>
+    </section>
+
+    <!-- ARCHITEKTUR -->
+    <section>
+      <h2>🏗️ Wie ist es aufgebaut?</h2>
+      <div class="grid">
+        <div>
+          <h3>Frontend</h3>
+          <ul>
+            <li>HTML/CSS/JS (eine Datei)</li>
+            <li>Responsive & Dark Mode</li>
+            <li>GitHub Pages Hosting</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Backend</h3>
+          <ul>
+            <li>Supabase (Auth, PostgreSQL, Realtime)</li>
+            <li>Region: EU-West (DSGVO-freundlich)</li>
+            <li>Free Tier: 500MB DB, 1GB Storage</li>
+          </ul>
+        </div>
+        <div>
+          <h3>KI-Inferenz</h3>
+          <ul>
+            <li>Phase 1: Free APIs (Groq, HF, Together)</li>
+            <li>Phase 2: Eigenes Fine-Tuning (QLoRA)</li>
+            <li>Phase 3: Llama 70B via API oder lokal</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIERE & PREISE -->
+    <section>
+      <h2>💰 Tiers & Kosten</h2>
+      <div class="grid">
+        <div class="tier free">
+          <h4>Free</h4>
+          <div class="price free">0€</div>
+          <ul style="text-align:left;font-size:0.9rem">
+            <li>100 Messages/Tag</li>
+            <li>7B Modelle</li>
+            <li>Community-Zugang</li>
+            <li>Supabase Free</li>
+          </ul>
+        </div>
+        <div class="tier ultra">
+          <h4>Ultra</h4>
+          <div class="price paid">~5€/Monat</div>
+          <ul style="text-align:left;font-size:0.9rem">
+            <li>1.000 Messages/Tag</li>
+            <li>14B Modelle</li>
+            <li>Priority Support</li>
+            <li>Erweiterte Stats</li>
+          </ul>
+        </div>
+        <div class="tier god">
+          <h4>GOD</h4>
+          <div class="price paid">~20€/Monat</div>
+          <ul style="text-align:left;font-size:0.9rem">
+            <li>Unlimited Messages</li>
+            <li>70B Modelle (via API)</li>
+            <li>Eigene Fine-Tunes</li>
+            <li>API-Zugang</li>
+          </ul>
+        </div>
+        <div class="tier nezzo">
+          <h4>Nezzo</h4>
+          <div class="price paid">Custom</div>
+          <ul style="text-align:left;font-size:0.9rem">
+            <li>Self-Hosted Option</li>
+            <li>Volle Kontrolle</li>
+            <li>Enterprise Support</li>
+            <li>White-Label</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:15px;font-size:0.9rem;color:var(--muted)">
+        💡 Alle Tiers starten mit 0€. Bezahl-Features kommen später. Du kannst alles auch komplett selbst hosten.
+      </p>
+    </section>
+
+    <!-- TOKENS & KOSTEN -->
+    <section>
+      <h2>🪙 Tokens & Rechen-Kosten</h2>
+      <div class="token-info">
+        1.000 Tokens ≈ 750 Wörter<br>
+        Input: ~0.15$/1M Tokens (Groq Free Tier)<br>
+        Output: ~0.60$/1M Tokens (Groq Free Tier)
+      </div>
+      <p><strong>Beispiel:</strong> Ein Chat mit 2.000 Tokens kostet dich bei Free APIs ≈ 0€ (within limits). Bei eigenem 70B-Modell: ~0.02€ auf Spot-GPUs.</p>
+      
+      <div class="warning">
+        ⚠️ <strong>Wichtig:</strong> Ein 70B Llama-Modell <em>selbst zu trainieren</em> kostet ~300-2000€ (GPU-Cluster).<br>
+        ✅ <strong>Aber:</strong> Du kannst mit 7B/8B-Modellen starten (0€ auf Colab Free) und später upgraden.
+      </div>
+      
+      <h3>💡 Kosten sparen:</h3>
+      <ul>
+        <li>Nutze Free-Tier APIs für den Start (Groq, Together, HF)</li>
+        <li>Fine-Tune nur kleine Modelle (7B) mit QLoRA</li>
+        <li>Exportiere als GGUF → läuft sogar auf CPU</li>
+        <li>Hoste die Website auf GitHub Pages (0€)</li>
+      </ul>
+    </section>
+
+    <!-- ROADMAP -->
+    <section>
+      <h2>🗓️ Roadmap</h2>
+      <ul>
+        <li><strong>Phase 1 (Jetzt):</strong> Info-Seite + Supabase Setup + MVP Chat</li>
+        <li><strong>Phase 2 (Q2 2026):</strong> Login, Community, Free-Tier API Integration</li>
+        <li><strong>Phase 3 (Q3 2026):</strong> Eigenes Fine-Tuning Pipeline (7B Modelle)</li>
+        <li><strong>Phase 4 (Q4 2026):</strong> 70B Support via API oder Self-Host</li>
+      </ul>
+    </section>
+
+    <!-- MITMACHEN -->
+    <section>
+      <h2>🤝 Mitmachen</h2>
+      <p>Nezzo AI ist Open Source. Du kannst:</p>
+      <ul>
+        <li>⭐ Das Repo starren: <a href="https://github.com/thenano-host/nezzi-ai" target="_blank">github.com/thenano-host/nezzi-ai</a></li>
+        <li>🐛 Issues melden oder Features vorschlagen</li>
+        <li>🔧 Pull Requests senden (auch als Anfänger!)</li>
+        <li>🌍 Übersetzungen beitragen</li>
+      </ul>
+      <p style="margin-top:15px"><strong>Du bist Noob?</strong> Perfekt! Wir lernen gemeinsam. Jede Hilfe zählt. 💪</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>🤖 Nezzo AI – Made with ❤️ by LobiGmbh & TheHappyMCRealm</p>
+      <p style="margin-top:8px">
+        <a href="https://github.com/thenano-host" target="_blank">GitHub</a> • 
+        <a href="https://thenano-host.github.io" target="_blank">Nano Host</a> • 
+        <a href="https://supabase.com" target="_blank">Supabase</a>
+      </p>
+      <p style="margin-top:15px;font-size:0.85rem;color:var(--muted)">
+        Status: <span style="color:var(--success)">● Online</span> • 
+        Letzte Aktualisierung: April 2026 • 
+        Lizenz: MIT
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
